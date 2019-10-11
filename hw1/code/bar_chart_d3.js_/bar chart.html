@@ -44,6 +44,12 @@ var y = d3.scaleLinear()
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
+svg.append("text")
+    .attr("x", width / 2 )
+    .attr("y", 0)
+    .style("text-anchor", "middle")
+    .text("men applicants in year");
+
 
 // Bars
 svg.selectAll("mybar")

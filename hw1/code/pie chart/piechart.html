@@ -31,13 +31,9 @@ var svg = d3.select("#my_dataviz")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 // Create dummy data
-var data = {"year": 2018,
+var data = {
     "men_applied": 45636,
-    "women_applied": 52265,
-    "men_admitted": 13781,
-    "women_admitted": 15821,
-    "men_enrolled": 3220,
-    "women_enrolled": 3484}
+    "women_applied": 52265}
 
 // set the color scale
 var color = d3.scaleOrdinal()
@@ -78,5 +74,10 @@ svg
   .style("text-anchor", "center")
   .style("font-size", 10)
 
+svg.append("text")
+    .attr("x", radius / 30-80 )
+    .attr("y", -300)
+    .style("text-anchor", "top")
+    .text("men and women applicants comparison");
 
 </script>
